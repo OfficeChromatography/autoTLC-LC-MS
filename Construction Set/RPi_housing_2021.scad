@@ -1,9 +1,9 @@
 //electronic housing for Raspberry Pi, Arduino and Ramps shield
 
-//housing();
+housing();
 //pi_support();
 //cover();
-full_view(); //not for printing
+//full_view(); //not for printing
 
 module full_view() {
     housing();
@@ -55,7 +55,9 @@ module housing(){
 //cut-out Arduino USB
             translate([-8.5, 45, 8]) cube([14, 20, 13]);
 //cutout Ramps power
-            translate([-46, 45, 22]) cube([23, 20, 12]);    
+            translate([-46, 45, 22]) cube([23, 20, 12]); 
+//hole for signal cable plug
+            translate([35, 60, 65]) rotate([90, 0, 0]) cylinder(h=20, r=4, $fn=30); 
 
 ////Sb25 Port         
             translate([ 25,52,8.5]) rotate([90,0,0]) cylinder(h=10, r=1,center=true,$fn=60);       
@@ -94,10 +96,10 @@ module housing(){
 translate([-27, 52.5, 56]) cube([2, 3, 18]);
 translate([-9.5, 52.5, 56]) cube([2, 3, 18]);    
 
-string = "autoTLC-MS2";
+string = "autoTLC-LC-MS";
 rotate ([90,0,0])
-translate ([-51,25,55])
-linear_extrude(3) text(string, size = 12, direction = "ltr", spacing = 1 );
+translate ([-49,25,55])
+linear_extrude(3) text(string, size = 10, direction = "ltr", spacing = 1);
 } 
 module pi_support() {
 difference() {
