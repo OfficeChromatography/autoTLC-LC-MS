@@ -16,6 +16,8 @@ by deleting files and folders not used for autoTLCMS and by updating the scripts
 The new 3D printed parts are in the folder 'Construction Set'.
 The main parts are still available [here](https://github.com/OfficeChromatography/autoTLCMS.git).
 
+![Rpi-housing)](RPi-housing)
+
 ## Raspberry Pi 4B 
 The recently introduced Raspberry Pi 4B with 4 GB or 8 GB RAM is a rather powerful PC, why the TLC-MS_manager also 
 perfectly runs on this system much cheaper than the NUC-Mini-PC [formerly used](https://doi.org/10.1002/rcm.8631).
