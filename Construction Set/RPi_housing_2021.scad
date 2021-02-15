@@ -1,14 +1,15 @@
 //electronic housing for Raspberry Pi, Arduino and Ramps shield
 
-housing();
+//housing();
 //pi_support();
 //cover();
-//full_view(); //not for printing
+full_view(); //not for printing
 
 module full_view() {
     housing();
     pi_support();
     cover();
+    screws();
 }
 
 module housing(){
@@ -56,8 +57,11 @@ module housing(){
             translate([-8.5, 45, 8]) cube([14, 20, 13]);
 //cutout Ramps power
             translate([-46, 45, 22]) cube([23, 20, 12]); 
-//hole for signal cable plug
-            translate([35, 60, 65]) rotate([90, 0, 0]) cylinder(h=20, r=4, $fn=30); 
+//hole for barrel plug for pump signal cable
+            translate([42, 60, 20]) rotate([90, 0, 0]) cylinder(h=20, r=4, $fn=30);
+//hole for barrel plug for MS start signal cable
+            translate([40, 60, 60]) rotate([90, 0, 0]) cylinder(h=20, r=4, $fn=30); 
+
 
 ////Sb25 Port         
             translate([ 25,52,8.5]) rotate([90,0,0]) cylinder(h=10, r=1,center=true,$fn=60);       
@@ -104,8 +108,8 @@ linear_extrude(3) text(string, size = 10, direction = "ltr", spacing = 1);
 module pi_support() {
 difference() {
     union() {
-        translate([-45, 26.5, 50]) cube([56, 26, 5]);
-        translate([-45, -52.5, 50]) cube([56, 26, 5]);
+        translate([-45, 26.5, 49.5]) cube([56, 26, 5]);
+        translate([-45, -52.5, 49.5]) cube([56, 26, 5]);
     }
     translate([-35, 65, 52.5]) rotate([90, 0, 0]) cylinder(r=1.4, h=30, $fn=30);
     translate([  1, 65, 52.5]) rotate([90, 0, 0]) cylinder(r=1.4, h=30, $fn=30);
@@ -130,4 +134,10 @@ module cover() {
         translate([ 46.5,-44.5,80-4]) cylinder(h=4, r=8,$fn=60);  
         translate([-46.5, 44.5,80-4]) cylinder(h=4, r=8,$fn=60);
         }
+}
+module screws() {
+        translate([-35, 57.5, 52]) rotate([90, 0, 0]) cylinder(r=2.5, h=3, $fn=30);
+       translate([1, 57.5, 52]) rotate([90, 0, 0]) cylinder(r=2.5, h=3, $fn=30);
+       translate([-35, -53.5, 52]) rotate([90, 0, 0]) cylinder(r=2.5, h=4, $fn=30); 
+       translate([1, -53.5, 52]) rotate([90, 0, 0]) cylinder(r=2.5, h=4, $fn=30);
 }
