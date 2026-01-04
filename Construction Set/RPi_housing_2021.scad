@@ -1,9 +1,9 @@
 //electronic housing for Raspberry Pi, Arduino and Ramps shield
 
-//housing();
+housing();
 //pi_support();
 //cover();
-full_view(); //not for printing
+//full_view(); //not for printing
 
 module full_view() {
     housing();
