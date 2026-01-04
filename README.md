@@ -22,6 +22,6 @@ The main parts are still available [here](https://github.com/OfficeChromatograph
 The recently introduced Raspberry Pi 4B with 4 GB or 8 GB RAM is a rather powerful PC, why the TLC-MS_manager also 
 perfectly runs on this system much cheaper than the NUC-Mini-PC [formerly used](https://doi.org/10.1002/rcm.8631).
 
-## Info
-For more information read the publication in ... (2021), authored by 
-Annabel Mehl, Wolfgang Schwack and Gertrud E. Morlock:
+## Reference
+Annabel Mehl, Wolfgang Schwack, Gertrud E. Morlock, On-surface autosampling for liquid chromatography−mass spectrometry.
+Journal of Chromatography A (2021) 1651, 462334 (https://doi.org/10.1016/j.chroma.2021.462334) 

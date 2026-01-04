@@ -11,9 +11,9 @@ difference(){
    translate([80, 100, 6]) cube([3.2, 20, 6], center=true);
    //holes for 3-mm screw tap
    translate([210, 24.5, 4.2])
-   rotate([0, 90, 0]) cylinder(h=20, r=1.4);
+   rotate([0, 90, 0]) cylinder(h=20, r=1.4, $fn=60);
    translate([210, 24.5+60, 4.2])
-   rotate([0, 90, 0]) cylinder(h=20, r=1.4);
+   rotate([0, 90, 0]) cylinder(h=20, r=1.4, $fn=60);
    translate([4, 0, 2]) cube([212, 4, 10]);
    translate([0, 0, 5]) cube([5, 98, 5]);
    }
